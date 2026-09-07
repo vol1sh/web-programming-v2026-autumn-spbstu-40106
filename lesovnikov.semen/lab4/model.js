@@ -36,21 +36,31 @@ export function groupGamesByReleaseYear(games) {
 export function getUniquePlatforms(games) {
   const platforms = new Set();
   for (const game of games) {
-    for (const platform of game.platforms) {
-      platforms.add(platform);
+    if (Array.isArray(game.platforms)) {
+      for (const platform of game.platforms) {
+        platforms.add(platform);
+      }
     }
   }
   return Array.from(platforms);
 }
 
 export function findGamesByPlatform(games, platform) {
-  return games.filter((game) => game.platforms.includes(platform));
+  return games.filter(
+    (game) =>
+      Array.isArray(game.platforms) && game.platforms.includes(platform),
+  );
 }
 
 export function groupGamesByPlatformCount(games) {
   const groups = {};
   for (const game of games) {
-    const count = game.platformCount;
+    const count =
+      typeof game.platformCount === 'number'
+        ? game.platformCount
+        : Array.isArray(game.platforms)
+          ? game.platforms.length
+          : 0;
     if (!groups[count]) {
       groups[count] = [];
     }

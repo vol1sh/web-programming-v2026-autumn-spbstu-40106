@@ -53,7 +53,7 @@ export function findGamesByPlatform(games, platform) {
 }
 
 export function groupGamesByPlatformCount(games) {
-  const groups = {};
+  const groups = new Map();
   for (const game of games) {
     const count =
       typeof game.platformCount === 'number'
@@ -61,10 +61,10 @@ export function groupGamesByPlatformCount(games) {
         : Array.isArray(game.platforms)
           ? game.platforms.length
           : 0;
-    if (!groups[count]) {
-      groups[count] = [];
+    if (!groups.has(count)) {
+      groups.set(count, []);
     }
-    groups[count].push(game);
+    groups.get(count).push(game);
   }
   return groups;
 }

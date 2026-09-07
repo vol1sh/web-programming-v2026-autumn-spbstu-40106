@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторная работа 4 — Игры и платформы</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Каталог игр и платформ</h1>
+    </header>
+
+    <main class="app-main">
+      <section class="form-section">
+        <h2>Добавить новую игру</h2>
+        <form class="entity-form" data-testid="entity-form">
+          <div class="form-group">
+            <label for="title-input">Название игры:</label>
+            <input
+              id="title-input"
+              name="title"
+              type="text"
+              required
+              placeholder="Например, Cyberpunk 2077"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="year-input">Год выпуска:</label>
+            <input
+              id="year-input"
+              name="releaseYear"
+              type="number"
+              required
+              placeholder="Например, 2020"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="platform-input">Начальная платформа (опционально):</label>
+            <input
+              id="platform-input"
+              name="platform"
+              type="text"
+              placeholder="Например, PC"
+            />
+          </div>
+
+          <button class="btn btn-primary" type="submit">Добавить игру</button>
+        </form>
+      </section>
+
+      <section class="list-section">
+        <h2>Список игр</h2>
+        <div class="entity-list" data-testid="entity-list"></div>
+      </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

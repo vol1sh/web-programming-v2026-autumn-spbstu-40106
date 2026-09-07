@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles.css';
 
@@ -90,7 +90,11 @@ function App() {
           <div className="chat-empty">История сообщений пуста</div>
         ) : (
           messages.map((item) => (
-            <article key={item.id} className="chat-item" data-testid="chat-item">
+            <article
+              key={item.id}
+              className="chat-item"
+              data-testid="chat-item"
+            >
               <div className="chat-item-meta">
                 <span className="chat-item-author">{item.author}</span>
                 <time className="chat-item-time" dateTime={item.timestamp}>
@@ -132,7 +136,11 @@ function App() {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary" data-testid="chat-send">
+        <button
+          type="submit"
+          className="btn btn-primary"
+          data-testid="chat-send"
+        >
           Отправить
         </button>
       </form>

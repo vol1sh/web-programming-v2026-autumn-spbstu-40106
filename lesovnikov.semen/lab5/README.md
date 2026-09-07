@@ -3,6 +3,7 @@
 ## Задание
 
 Вариант 13. Создать простой чат.
+
 - Сохранение истории сообщений в браузере через localStorage.
 - Ввод имени пользователя и отправка сообщений.
 - Отображение имени автора и даты/времени каждого сообщения.
@@ -11,16 +12,23 @@
 
 ## Реализация
 
-- Приложение разработано на React 18 в функциональном стиле с хуками состояния `useState`.
+- Приложение разработано на React 18 в функциональном стиле с хуками состояния
+  `useState`.
 - Точка входа смонтирована в корневой элемент `<main data-testid="app"></main>`.
-- Реализованы все контрактные атрибуты автотестов: `[data-testid="chat-name"]`, `[data-testid="chat-message"]`, `[data-testid="chat-send"]`, `[data-testid="chat-history"]`, `[data-testid="chat-item"]`, `[data-testid="chat-clear"]`.
-- Данные сообщений синхронизируются с `localStorage` синхронно при отправке и очистке.
+- Реализованы все контрактные атрибуты автотестов: `[data-testid="chat-name"]`,
+  `[data-testid="chat-message"]`, `[data-testid="chat-send"]`,
+  `[data-testid="chat-history"]`, `[data-testid="chat-item"]`,
+  `[data-testid="chat-clear"]`.
+- Данные сообщений синхронизируются с `localStorage` синхронно при отправке и
+  очистке.
 - Стили оформлены в `styles.css` без ID-селекторов и `!important`.
 
 ## Запуск
 
 Из корня репозитория откройте проект или выполните:
+
 ```bash
 cd lesovnikov.semen/lab5
 npm install
 npm run dev
+```

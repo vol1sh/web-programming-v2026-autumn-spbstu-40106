@@ -85,7 +85,7 @@ body {
   margin: 0;
   font-size: 14px;
   color: #334155;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .chat-form {

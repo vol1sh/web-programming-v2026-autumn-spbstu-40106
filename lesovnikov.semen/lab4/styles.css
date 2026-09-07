@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 24px;
   font-family: Arial, sans-serif;
-  color: #222222;
+  color: #222;
   background-color: #f8f9fa;
   line-height: 1.5;
 }
@@ -31,7 +31,7 @@ body {
 
 .form-section,
 .list-section {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   border: 1px solid #e2e8f0;
@@ -78,7 +78,7 @@ h2 {
 
 .btn-primary {
   background-color: #2563eb;
-  color: #ffffff;
+  color: #fff;
   align-self: flex-start;
 }
 
@@ -88,7 +88,7 @@ h2 {
 
 .btn-danger {
   background-color: #ef4444;
-  color: #ffffff;
+  color: #fff;
 }
 
 .btn-danger:hover {
@@ -114,7 +114,7 @@ h2 {
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   padding: 16px;
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 12px;

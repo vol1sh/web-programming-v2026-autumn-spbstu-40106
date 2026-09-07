@@ -1,4 +1,4 @@
-import { Game } from './model.js';
+import {Game} from './model.js';
 
 const STORAGE_KEY = 'lab4_games_catalog';
 const asyncDelay = (ms = 50) =>
@@ -6,7 +6,7 @@ const asyncDelay = (ms = 50) =>
     setTimeout(resolve, ms);
   });
 
-let games = loadGames();
+const games = loadGames();
 
 function loadGames() {
   const rawData = localStorage.getItem(STORAGE_KEY);
@@ -19,7 +19,7 @@ function loadGames() {
   try {
     const parsed = JSON.parse(rawData);
     return parsed.map(
-      (item) => new Game(item.title, item.platforms, item.releaseYear)
+      (item) => new Game(item.title, item.platforms, item.releaseYear),
     );
   } catch {
     return [];
@@ -146,7 +146,8 @@ if (form) {
     const releaseYear = formData.get('releaseYear');
     const platform = formData.get('platform');
 
-    const platforms = platform && String(platform).trim() ? [String(platform).trim()] : [];
+    const platforms =
+      platform && String(platform).trim() ? [String(platform).trim()] : [];
     const newGame = new Game(title, platforms, releaseYear);
 
     await asyncDelay(50);
